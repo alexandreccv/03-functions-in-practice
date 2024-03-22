@@ -17,6 +17,15 @@ const ligarDesligar = (status) => {
 console.log(ligarDesligar('ligado'));
 
 // 2 - Crie a função circleArea, que calcule a área de um círculo. 
+const circleArea = (raio) => {
+  if (typeof raio !== 'number') {
+    return `O parâmetro radius deve ser um número`;
+  }
+
+  const pi = 3.14
+  const area = pi * (raio * raio)
+  return `Essa é a área do círculo: ${area}` 
+}
 
 
 // 3 - Crie a função longestWord, que receba uma frase como parâmetro e retorne a maior palavra da frase.
