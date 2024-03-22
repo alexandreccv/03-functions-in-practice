@@ -29,8 +29,21 @@ const circleArea = (raio) => {
 
 
 // 3 - Crie a função longestWord, que receba uma frase como parâmetro e retorne a maior palavra da frase.
+  const longestWord = (frase) => {
+    const palavras  = frase.split(' ') 
+    let maiorPalavra = '';
 
+    for (let i = 0; i < palavras.length; i += 1) {
+      const palavra = palavras[i]
+      if (palavra.length > maiorPalavra.length) {
+        maiorPalavra = palavra;
+      }
+    }
 
+    return maiorPalavra
+  }
+
+  console.log(longestWord('Antônio foi ao banheiro e não sabemos o que aconteceu'))
 // Não modifique as linhas abaixo
 module.exports = {
   ligarDesligar: typeof ligarDesligar === 'function' ? ligarDesligar : (() => {}),
